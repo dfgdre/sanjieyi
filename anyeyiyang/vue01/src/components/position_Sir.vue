@@ -1,5 +1,13 @@
 <template>
   <div class="one_1">
+    <div class="remen">
+      <div class="shuju">
+        <div class="zumu">热门城市</div>
+        <div class="once" v-for="(one,key) in arr2" :key="key">
+          {{one.name}}
+        </div>
+      </div>
+    </div>
     <div class="shuju" v-for="(once,k) in arr1">
       <div class="zumu">{{once[0]}}</div>
       <div class="once" v-for="(one,key) in once[1]">
@@ -16,6 +24,7 @@
     data(){
       return {
         arr1:[],
+        arr2:[]
       }
     },
     computed:{
@@ -34,6 +43,14 @@
         }
         console.log(a);
         this.arr1=a;
+      }).catch((error)=>{
+        console.log(error.data);
+      });
+
+      Vue.axios.get('https://elm.cangdu.org/v1/cities?type=hot',{}).then((result)=>{
+        //后台传来的值存在result的data里面
+        console.log(result.data);
+        this.arr2=result.data;
       }).catch((error)=>{
         console.log(error.data);
       })
