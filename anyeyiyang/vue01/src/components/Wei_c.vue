@@ -1,5 +1,7 @@
 <template>
-    $END$
+    <div class="wei_c">
+      <p>这是wei_c标签</p>
+    </div>
 </template>
 
 <script>
