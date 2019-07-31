@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import wei from "../components/Wei_c"
-import qyh from "../components/changshi_qyh"
 
 Vue.use(Router)
 
+import pos from "../components/position_Sir"
+
 export default new Router({
   routes: [
-    {path:'/a',component:wei},
-    {path:'/qyh',component:qyh}
+    {path:"",redirect:"/position_Sir"},
+    {path:"/position_Sir",component:pos}
   ]
 })
