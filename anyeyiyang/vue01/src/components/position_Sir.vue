@@ -1,10 +1,10 @@
 <template>
   <div class="one_1">
     <div class="op_head">
-      <div class="head1"><span style="margin-left: 5px">ele.me</span><span class="pull-right">注册</span><span class="pull-right">|</span><span class="pull-right">登录</span>
+      <div class="head1"><span style="margin-left: 5px">ele.me</span><span class="pull-right" @click="zhuce">注册</span><span class="pull-right">|</span><span class="pull-right">登录</span>
         <div class="clearfix"></div>
       </div>
-      <div class="head2"><span class="pull-left">当前定位城市:</span><span class="pull-right" id="pull-right">定位不准时,请在城市列表中选择</span>
+      <div class="head2"><span class="pull-left" style="color: #666">当前定位城市:</span><span class="pull-right" id="pull-right">定位不准时,请在城市列表中选择</span>
         <div class="clearfix"></div>
       </div>
       <div class="head3"><span class="span-left">郑州</span><div class="head3_fh pull-right"><span class="pull-right glyphicon glyphicon-menu-right" id="span-right"></span></div>
@@ -39,8 +39,11 @@
     computed:{},
     methods:{
       btn_name(k){
-        this.$router.push({path:"/register",query:{name:k}});
+        // this.$router.push({path:"/register",query:{name:k}});
       },
+      zhuce(){
+        this.$router.push({path:"/register"});
+      }
     },
     created(){
       Vue.axios.get('https://elm.cangdu.org/v1/cities?type=group',{}).then((result)=>{
@@ -134,7 +137,7 @@
     height: 3rem;
     line-height: 3rem;
     font-size: 130%;
-    margin-top: 12%;
+    margin-top: 3.5rem;
   }
   .one_1 .head3{
     text-align: right;

@@ -13,9 +13,9 @@
 
 <style>
   html{
-    font-size: 16px;
     width: 100%;
     min-height: 100%;
+    font-size: 16px;
   }
   #app{
     width: 100%;

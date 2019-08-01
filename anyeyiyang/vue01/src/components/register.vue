@@ -2,11 +2,20 @@
     <div class="register" ref="register">
       <all_head>
         <template v-slot:one><router-link class="fanhui_qyh" :to="{path:'/position_Sir'}">0000</router-link></template>
-        <template v-slot:two>111科技撒奥会计部的撒看不到卡布达开裆裤节哀顺变卡级别卡世界杯的凯撒</template>
+        <template v-slot:two>注册</template>
         <template v-slot:three>111</template>
       </all_head>
-      <div class="add_qyh">
-        div
+      <div class="register_add_qyh">
+        <div class="register_add_one_qyh">
+          <input type="text" placeholder="账号">
+        </div>
+        <div class="register_add_two_qyh">
+          <input type="text" placeholder="账号">
+          <van-switch v-model="checked" size="1rem" active-color="#07c160" inactive-color="#f44"/>
+        </div>
+        <div class="register_add_three_qyh">
+          <input type="text" placeholder="账号">
+        </div>
       </div>
     </div>
 </template>
@@ -15,10 +24,16 @@
     import All_head from "./all_head";
     export default {
       name: "register",
+      data(){
+        return {
+          checked: true
+        }
+      },
       components: {All_head},
       mounted(){
         this.$refs.register.style.height = window.innerHeight+"px";
-      }
+      },
+      methods: {}
     }
 </script>
 
@@ -30,5 +45,15 @@
   }
   .register .fanhui_qyh{
     color: white;
+  }
+  .register .register_add_qyh{
+    margin-top: 0.5rem;
+  }
+  .register .register_add_qyh>div{
+    padding: 1.4rem;
+    padding-bottom: 0.9rem;
+    padding-top: 0.9rem;
+    background-color: white;
+    margin-bottom: 1px;
   }
 </style>

@@ -11,6 +11,15 @@ import VueAxios from 'vue-axios'
 
 Vue.use(VueAxios, axios)
 
+//引入样式重置文件
+import "@/assets/css/reset.css";
+// import "@/assets/js/resize"
+
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
