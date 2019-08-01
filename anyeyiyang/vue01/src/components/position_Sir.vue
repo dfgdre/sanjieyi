@@ -43,6 +43,9 @@
       },
       zhuce(){
         this.$router.push({path:"/register"});
+      },
+      denglu(){
+        this.$router.push({path:"/sign_in"});
       }
     },
     created(){
