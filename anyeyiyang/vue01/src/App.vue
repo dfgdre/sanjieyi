@@ -5,9 +5,10 @@
 </template>
 
 <script>
-export default {
-  name: 'App',
-}
+  import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+  export default {
+    name: 'App',
+  }
 </script>
 
 <style>
