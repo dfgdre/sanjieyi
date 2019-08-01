@@ -1,9 +1,12 @@
 <template>
 <div class="gonde">
-  <div class="sign_in">
-    <p class=" glyphicon glyphicon-menu-left jiao"></p>
-    <span class="password">密码登录</span>
-  </div>
+  <all_head>
+    <template v-slot:one><p class=" glyphicon glyphicon-menu-left jiao" @click="hui"></p></template>
+    <template v-slot:two><p>密码登录</p></template>
+
+  </all_head>
+
+
   <div class="kong"></div>
   <div class="xiao">
     <input  class="number" type="text" name="firstname" placeholder="账号">
@@ -30,6 +33,7 @@
   import All_head from "./all_head";
     export default {
         name: "sign_in",
+      components: {All_head},
       data(){
           return{
             checked:false
@@ -37,15 +41,14 @@
           }
       },
       methods:{
-
+        hui(){
+          this.$router.push({path:"/position_Sir"});
+        }
       }
     }
 </script>
 <style scoped>
-  .gonde{
-    width: 100%;
-    background-color: rgb(242,242,242);
-  }
+
 .sign_in{
   width: 100%;
   height: 30px;
@@ -53,7 +56,7 @@
 }
   .jiao{
     color: white;
-     font-size: 2rem;
+     font-size: 1.5rem;
     margin-top: 1%;
     margin-left: 2%;
   }
@@ -97,7 +100,7 @@
   }
   .ti{
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 40px;
   }
   .da{
