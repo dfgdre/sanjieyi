@@ -1,7 +1,7 @@
 <template>
   <div class="one_1">
     <div class="op_head">
-      <div class="head1"><span style="margin-left: 5px">ele.me</span><span class="pull-right" @click="zhuce">注册</span><span class="pull-right">|</span><span class="pull-right">登录</span>
+      <div class="head1"><span style="margin-left: 5px">ele.me</span><span class="pull-right" @click="zhuce">注册</span><span class="pull-right">|</span><span class="pull-right" @click="denglu">登录</span>
         <div class="clearfix"></div>
       </div>
       <div class="head2"><span class="pull-left" style="color: #666">当前定位城市:</span><span class="pull-right" id="pull-right">定位不准时,请在城市列表中选择</span>
@@ -43,6 +43,9 @@
       },
       zhuce(){
         this.$router.push({path:"/register"});
+      },
+      denglu(){
+        this.$router.push({path:"/sign_in"});
       }
     },
     created(){

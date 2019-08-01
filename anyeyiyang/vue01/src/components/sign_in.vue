@@ -18,6 +18,7 @@
   <p class="shi">温馨提示: 未注册过得账号，登录时将自动注册</p>
   <p class="shi hei">注册过得用户可凭账号密码登录</p>
   <div class="da"><div class="in"><span class="ti">登录</span></div></div>
+
   <p class="xin">重置密码?</p>
 
 </div>
@@ -80,7 +81,7 @@
 }
 .shi{
   color: red;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   margin-left: 5px;
 }
  .hei{
