@@ -14,7 +14,11 @@
     <div class="remen">
       <div class="shuju">
         <div class="zumu">热门城市</div>
+<<<<<<< HEAD
         <div class="once once-c" v-for="(one,key) in arr2" :key="key" @click="btn_name(once.name)">{{one.name}}</div>
+=======
+        <div class="once" v-for="(one,key) in arr2" :key="key" @click="btn_name(one.name)">{{one.name}}</div>
+>>>>>>> 07301bbc15ae56913cfff7ab5600c71c6f717715
       </div>
     </div>
     <div class="shuju" v-for="(once,k) in arr1" :key="k">
@@ -36,9 +40,10 @@
         arr2:[],
       }
     },
-    computed:{
+    computed:{},
+    methods:{
       btn_name(k){
-        this.$router.push({path:"/position_Sir",query:{name:"111"}});
+        this.$router.push({path:"/position_Sir",query:{name:k}});
       },
     },
     created(){
@@ -78,7 +83,7 @@
     line-height: 0;
   }
   .one_1 .shuju{
-    font-size: 14px;
+    font-size: 0.8rem;
     width: 100%;
     border-top: 1px solid rgba(0,0,0,0.1);
     border-left: 1px solid rgba(0,0,0,0.1);
@@ -87,9 +92,9 @@
     background:white;
   }
   .one_1 .zumu{
-    font-size: 14px;
-    height: 30px;
-    line-height: 30px;
+    font-size: 0.8rem;
+    height: 1.87rem;
+    line-height: 1.87rem;
     width: 100%;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 
@@ -97,8 +102,8 @@
   .one_1 .once{
     font-size: 100%;
     width: 25%;
-    height: 30px;
-    line-height: 30px;
+    height: 1.87rem;
+    line-height: 1.87rem;
     display: inline-block;
     text-align: center;
     border-right: 1px solid rgba(0,0,0,0.1);
@@ -114,8 +119,8 @@
     display: inline-block;
   }
   .one_1 .op_head{
-    line-height: 20px;
-    font-size: 10px;
+    line-height: 1.25rem;
+    font-size: 0.6rem;
   }
   .one_1 .head1{
     background-color: #3190e8;
