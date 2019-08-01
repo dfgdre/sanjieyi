@@ -39,7 +39,7 @@
     computed:{},
     methods:{
       btn_name(k){
-        this.$router.push({path:"/position_Sir",query:{name:k}});
+        this.$router.push({path:"/register",query:{name:k}});
       },
     },
     created(){
@@ -96,10 +96,10 @@
 
   }
   .one_1 .once{
-    font-size: 100%;
+    font-size: 0.9rem;
     width: 25%;
-    height: 1.87rem;
-    line-height: 1.87rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
     display: inline-block;
     text-align: center;
     border-right: 1px solid rgba(0,0,0,0.1);
@@ -120,8 +120,8 @@
   }
   .one_1 .head1{
     background-color: #3190e8;
-    height: 45px;
-    line-height: 45px;
+    height: 3.5rem;
+    line-height: 3.5rem;
     color: white;
     font-size: 180%;
     position: fixed;
@@ -131,15 +131,15 @@
   }
   .one_1 .head2{
     background: white;
-    height: 45px;
-    line-height: 45px;
+    height: 3rem;
+    line-height: 3rem;
     font-size: 130%;
-    margin-top: 13%;
+    margin-top: 12%;
   }
   .one_1 .head3{
     text-align: right;
     background: white;
-    height: 45px;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -147,22 +147,22 @@
     border-bottom: 2px solid rgba(0,0,0,0.1);
   }
   .pull-right{
-    margin-right: 8px;
+    margin-right: 0.5rem;
   }
   .pull-left{
-    margin-left: 8px;
+    margin-left: 0.5rem;
   }
   #pull-right{
     font-weight: 900;
     color: #9f9f9f;
   }
   .span-left{
-    margin-left: 8px;
+    margin-left: 0.5rem;
     font-size: 180%;
     color: #3190e8;
   }
   #span-right{
-    margin-right: 8px;
+    margin-right: 0.5rem;
     font-size: 180%;
   }
   .one_1 .once-c{
