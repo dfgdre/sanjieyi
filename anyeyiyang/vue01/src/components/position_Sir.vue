@@ -1,24 +1,24 @@
 <template>
   <div class="one_1">
     <div class="op_head">
-      <div class="head1"><span>ele.me</span><span class="pull-right">注册</span><span class="pull-right">|</span><span class="pull-right">登录</span>
+      <div class="head1"><span style="margin-left: 5px">ele.me</span><span class="pull-right" @click="zhuce">注册</span><span class="pull-right">|</span><span class="pull-right">登录</span>
         <div class="clearfix"></div>
       </div>
-      <div class="head2"><span class="pull-left">定位当前城市</span><span class="pull-right">定位不准时,请在城市列表中选择</span>
+      <div class="head2"><span class="pull-left" style="color: #666">当前定位城市:</span><span class="pull-right" id="pull-right">定位不准时,请在城市列表中选择</span>
         <div class="clearfix"></div>
       </div>
-      <div class="head3"><span>郑州</span><span class="pull-right"> > </span>
+      <div class="head3"><span class="span-left">郑州</span><div class="head3_fh pull-right"><span class="pull-right glyphicon glyphicon-menu-right" id="span-right"></span></div>
         <div class="clearfix"></div>
       </div>
     </div>
     <div class="remen">
       <div class="shuju">
         <div class="zumu">热门城市</div>
-        <div class="once" v-for="(one,key) in arr2" :key="key" @click="btn_name(once.name)">{{one.name}}</div>
+        <div class="once once-c" v-for="(one,key) in arr2" :key="key" @click="btn_name(one.name)">{{one.name}}</div>
       </div>
     </div>
     <div class="shuju" v-for="(once,k) in arr1" :key="k">
-      <div class="zumu">{{once[0]}}<p v-if="once[0]==='A'" class="p1">&emsp(按字母排序)</p></div>
+      <div class="zumu">{{once[0]}}<p v-if="once[0]==='A'" class="p1">&emsp;(按字母排序)</p></div>
       <div class="once" v-for="(one,key) in once[1]" :key="key" @click="btn_name(one.name)">
         {{one.name}}
       </div>
@@ -36,10 +36,14 @@
         arr2:[],
       }
     },
-    computed:{
+    computed:{},
+    methods:{
       btn_name(k){
-        this.$router.push({path:"/position_Sir",query:{name:"111"}});
+        // this.$router.push({path:"/register",query:{name:k}});
       },
+      zhuce(){
+        this.$router.push({path:"/register"});
+      }
     },
     created(){
       Vue.axios.get('https://elm.cangdu.org/v1/cities?type=group',{}).then((result)=>{
@@ -73,55 +77,98 @@
 <style scoped>
   .one_1{
     width: 100%;
-    background:rgba(0,0,0,0.1);
+    background:#f5f5f5;
     font-size: 0;
     line-height: 0;
   }
   .one_1 .shuju{
-    font-size: 14px;
+    font-size: 0.8rem;
     width: 100%;
-    border-top: 1px solid rgba(0,0,0,0.4);
-    border-left: 1px solid rgba(0,0,0,0.4);
-    box-shadow:0 1px 1px rgba(0,0,0,0.4),0 -1px 1px rgba(0,0,0,0.4);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    box-shadow:0 1px 1px rgba(0,0,0,0.1),0 -1px 1px rgba(0,0,0,0.1);
     margin-top: 5%;
-    background:antiquewhite;
+    background:white;
   }
   .one_1 .zumu{
-    font-size: 14px;
-    height: 30px;
-    line-height: 30px;
+    font-size: 0.8rem;
+    height: 1.87rem;
+    line-height: 1.87rem;
     width: 100%;
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+
   }
   .one_1 .once{
-    font-size: 100%;
+    font-size: 0.9rem;
     width: 25%;
-    height: 30px;
-    line-height: 30px;
+    height: 2.5rem;
+    line-height: 2.5rem;
     display: inline-block;
     text-align: center;
-    border-right: 1px solid rgba(0,0,0,0.4);
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     box-sizing: border-box;
 
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
+    color: #666;
   }
   .one_1 .p1{
     display: inline-block;
   }
   .one_1 .op_head{
-    line-height: 20px;
-    font-size: 10px;
+    line-height: 1.25rem;
+    font-size: 0.6rem;
   }
   .one_1 .head1{
-    background: blue;
+    background-color: #3190e8;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    color: white;
+    font-size: 180%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
   }
   .one_1 .head2{
-    background: skyblue;
+    background: white;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 130%;
+    margin-top: 3.5rem;
   }
   .one_1 .head3{
-    background: aquamarine;
+    text-align: right;
+    background: white;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-top: 2px solid rgba(0,0,0,0.1);
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+  }
+  .pull-right{
+    margin-right: 0.5rem;
+  }
+  .pull-left{
+    margin-left: 0.5rem;
+  }
+  #pull-right{
+    font-weight: 900;
+    color: #9f9f9f;
+  }
+  .span-left{
+    margin-left: 0.5rem;
+    font-size: 180%;
+    color: #3190e8;
+  }
+  #span-right{
+    margin-right: 0.5rem;
+    font-size: 180%;
+  }
+  .one_1 .once-c{
+    color: #3190e8;
   }
 </style>
