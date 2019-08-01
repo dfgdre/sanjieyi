@@ -10,30 +10,46 @@
           <input type="text" placeholder="账号">
         </div>
         <div class="register_add_two_qyh">
-          <input type="text" placeholder="账号">
-          <van-switch v-model="checked" size="1rem" active-color="#07c160" inactive-color="#f44"/>
+          <input :type="checked?'text':'password'" placeholder="密码">
+          <div class="want_switch">
+            <van-switch v-model="checked" size="1rem" active-color="#07c160"/>
+          </div>
         </div>
         <div class="register_add_three_qyh">
-          <input type="text" placeholder="账号">
+          <input type="number" placeholder="验证码">
+          <img :src="img" alt="">
         </div>
       </div>
     </div>
 </template>
 
 <script>
+  import Vue from 'vue';
     import All_head from "./all_head";
     export default {
       name: "register",
       data(){
         return {
-          checked: true
+          checked: false,
+          img:""
         }
       },
       components: {All_head},
       mounted(){
         this.$refs.register.style.height = window.innerHeight+"px";
       },
-      methods: {}
+      methods: {
+        post_data(){
+          Vue.axios.get('https://elm.cangdu.org/v1/captchas',{}).then((result)=>{
+            //后台传来的值存在result的data里面
+            console.log(result.data);
+            this.img=result.data.code;
+          }).catch((error)=>{
+            console.log(error.data);
+          })
+        }
+      },
+      computed:{}
     }
 </script>
 
@@ -55,5 +71,13 @@
     padding-top: 0.9rem;
     background-color: white;
     margin-bottom: 1px;
+  }
+  .register input{
+    width: 50%;
+  }
+  .register .want_switch{
+    text-align: right;
+    display: inline-block;
+    width: 48%;
   }
 </style>
