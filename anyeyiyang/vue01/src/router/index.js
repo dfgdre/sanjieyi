@@ -8,7 +8,7 @@ import sign_in from "../components/sign_in";
 
 export default new Router({
   routes: [
-    {path:"",redirect:"/sign_in"},
+    {path:"",redirect:"/position_Sir"},
     {path:"/position_Sir",component:pos},
     {path:"/sign_in",component:sign_in}
   ]

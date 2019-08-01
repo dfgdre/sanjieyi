@@ -7,22 +7,18 @@
       <div class="head2"><span class="pull-left">当前定位城市:</span><span class="pull-right" id="pull-right">定位不准时,请在城市列表中选择</span>
         <div class="clearfix"></div>
       </div>
-      <div class="head3"><span class="span-left">郑州</span><span class="pull-right" id="span-right"  > </span>
+      <div class="head3"><span class="span-left">郑州</span><div class="head3_fh pull-right"><span class="pull-right glyphicon glyphicon-menu-right" id="span-right"></span></div>
         <div class="clearfix"></div>
       </div>
     </div>
     <div class="remen">
       <div class="shuju">
         <div class="zumu">热门城市</div>
-<<<<<<< HEAD
-        <div class="once once-c" v-for="(one,key) in arr2" :key="key" @click="btn_name(once.name)">{{one.name}}</div>
-=======
-        <div class="once" v-for="(one,key) in arr2" :key="key" @click="btn_name(one.name)">{{one.name}}</div>
->>>>>>> 07301bbc15ae56913cfff7ab5600c71c6f717715
+        <div class="once once-c" v-for="(one,key) in arr2" :key="key" @click="btn_name(one.name)">{{one.name}}</div>
       </div>
     </div>
     <div class="shuju" v-for="(once,k) in arr1" :key="k">
-      <div class="zumu">{{once[0]}}<p v-if="once[0]==='A'" class="p1">&emsp(按字母排序)</p></div>
+      <div class="zumu">{{once[0]}}<p v-if="once[0]==='A'" class="p1">&emsp;(按字母排序)</p></div>
       <div class="once" v-for="(one,key) in once[1]" :key="key" @click="btn_name(one.name)">
         {{one.name}}
       </div>
@@ -125,9 +121,7 @@
   .one_1 .head1{
     background-color: #3190e8;
     height: 45px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+    line-height: 45px;
     color: white;
     font-size: 180%;
     position: fixed;
@@ -143,10 +137,12 @@
     margin-top: 13%;
   }
   .one_1 .head3{
+    text-align: right;
     background: white;
     height: 45px;
     display: flex;
     align-items: center;
+    justify-content: right;
     border-top: 2px solid rgba(0,0,0,0.1);
     border-bottom: 2px solid rgba(0,0,0,0.1);
   }
