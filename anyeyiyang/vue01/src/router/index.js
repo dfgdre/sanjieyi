@@ -10,7 +10,7 @@ import city from "../components/city_position"
 
 export default new Router({
   routes: [
-    {path:"",redirect:"/city"},
+    {path:"",redirect:"/sign_in"},
     {path:"/position_Sir",component:pos},
     {path:"/sign_in",component:sign_in},
     {path:"/register",component:register},

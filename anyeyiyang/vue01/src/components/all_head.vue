@@ -21,6 +21,8 @@
     width: 100%;
     height: 0.48rem;
     background: #3190e8;
+    position: fixed;
+    margin-top: -0.01rem;
   }
   .all_head .top_qyh{
     display: flex;

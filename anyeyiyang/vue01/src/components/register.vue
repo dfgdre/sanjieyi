@@ -1,9 +1,9 @@
 <template>
     <div class="register" ref="register">
       <all_head>
-        <template v-slot:one><router-link class="fanhui_qyh" :to="{path:'/position_Sir'}">0000</router-link></template>
-        <template v-slot:two>注册</template>
-        <template v-slot:three>111</template>
+        <template v-slot:one><router-link class="fanhui_qyh" :to="{path:'/position_Sir'}"><span class="pull-right glyphicon glyphicon-menu-left" id="span-right"></span></router-link></template>
+        <template v-slot:two><P class="p1">注册</P></template>
+        <!--<template v-slot:three>111</template>-->
       </all_head>
       <div class="register_add_qyh">
         <div class="register_add_one_qyh">
@@ -28,6 +28,8 @@
         <p class="login_tips">注册过的用户可凭账号密码登录</p>
         <button class="btn_tijiao"><router-link :to="{path: ''}" class="btn_a">注册</router-link></button>
       </div>
+      <!--<div class="resetting">重置密码?</div>-->
+      <router-link class="resetting" :to="{path:'/position_Sir'}">重置密码?</router-link>
     </div>
 </template>
 
@@ -63,6 +65,9 @@
 </script>
 
 <style scoped>
+  .p1{
+    font-size: 0.2rem;
+  }
   .register{
     width: 100%;
     height: 100%;
@@ -72,12 +77,13 @@
     color: white;
   }
   .register .register_add_qyh{
-    margin-top: 0.14rem;
+    padding-top: 0.6rem;
   }
   .register .register_add_qyh>div{
-    padding: 0.224rem;
-    padding-bottom: 0.144rem;
-    padding-top: 0.144rem;
+    padding: 0.12rem;
+    /*padding-bottom: 0.144rem;*/
+    /*padding-top: 0.55rem;*/
+    padding-left: 0.17rem;
     background-color: white;
     margin-bottom: 1px;
   }
@@ -92,29 +98,29 @@
   .register .yanzhengma{
   }
   .register img{
-    width: 5rem;
+    width: 0.8rem;
   }
   .register .yanzhengma_change{
-      margin-left: 1rem;
+      margin-left: 0.16rem;
   }
   .register .yanzhengma_change>p{
-    font-size: 1rem;
+    font-size: 0.16rem;
   }
   .register .yanzhengma_change>p:nth-last-of-type(1){
     color: #3b95e9;
   }
   .register .login_tips{
-    font-size: 0.7rem;
+    font-size: 0.112rem;
     color: red;
-    padding: 0.8rem 1rem;
-    line-height: 0.7rem;
+    padding: 0.128rem 0.16rem;
+    line-height: 0.112rem;
   }
   .register .btn_tijiao{
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
     display: block;
-    height: 3rem;
-    border-radius: 0.3rem;
+    height: 0.5rem;
+    border-radius: 0.05rem;
     background-color: #4cd964;
   }
   .register .btn_a{
@@ -124,5 +130,12 @@
     align-items: center;
     justify-content:center;
     color: white;
+  }
+  .resetting{
+    display: block;
+    color: #3b95e9;
+    margin-left: 2.95rem;
+    font-size: 0.14rem;
+    margin-top: 0.25rem;
   }
 </style>
