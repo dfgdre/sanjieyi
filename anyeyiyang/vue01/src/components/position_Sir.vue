@@ -17,8 +17,8 @@
         <div class="once" v-for="(one,key) in arr2" :key="key" @click="btn_name(once.name)">{{one.name}}</div>
       </div>
     </div>
-    <div class="shuju" v-for="(once,k) in arr1">
-      <div class="zumu">{{once[0]}}<p v-if="once[0]==='A'" class="p1">  &emsp(按字母排序)</p></div>
+    <div class="shuju" v-for="(once,k) in arr1" :key="k">
+      <div class="zumu">{{once[0]}}<p v-if="once[0]==='A'" class="p1">&emsp(按字母排序)</p></div>
       <div class="once" v-for="(one,key) in once[1]" :key="key" @click="btn_name(one.name)">
         {{one.name}}
       </div>
@@ -38,7 +38,7 @@
     },
     computed:{
       btn_name(k){
-        this.$router.push({path:"",query:{btnName:k}})
+        this.$router.push({path:"/position_Sir",query:{name:"111"}});
       },
     },
     created(){
