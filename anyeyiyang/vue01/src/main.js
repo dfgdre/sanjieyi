@@ -13,7 +13,7 @@ Vue.use(VueAxios, axios)
 
 //引入样式重置文件
 import "@/assets/css/reset.css";
-// import "@/assets/js/resize"
+import "@/assets/js/resize"
 
 
 import Vant from 'vant';

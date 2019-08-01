@@ -1,10 +1,10 @@
 <template>
   <div class="one_1">
     <div class="op_head">
-      <div class="head1"><span style="margin-left: 5px">ele.me</span><span class="pull-right" @click="zhuce">注册</span><span class="pull-right">|</span><span class="pull-right" @click="denglu">登录</span>
+      <div class="head1"><span style="margin-left: 0.112rem; font-size: 0.16rem">ele.me</span><span class="pull-right" @click="zhuce" style="margin-right: 0.112rem;">注册</span><span class="pull-right">|</span><span class="pull-right">登录</span>
         <div class="clearfix"></div>
       </div>
-      <div class="head2"><span class="pull-left" style="color: #666">当前定位城市:</span><span class="pull-right" id="pull-right">定位不准时,请在城市列表中选择</span>
+      <div class="head2"><span class="pull-left" style="color: #666">当前定位城市:</span><span class="pull-right" id="pull-right" style="margin-right: 0.08rem;">定位不准时,请在城市列表中选择</span>
         <div class="clearfix"></div>
       </div>
       <div class="head3"><span class="span-left">郑州</span><div class="head3_fh pull-right"><span class="pull-right glyphicon glyphicon-menu-right" id="span-right"></span></div>
@@ -13,12 +13,12 @@
     </div>
     <div class="remen">
       <div class="shuju">
-        <div class="zumu">热门城市</div>
+        <div class="zumu"><span style="margin-left: 0.128rem">热门城市</span></div>
         <div class="once once-c" v-for="(one,key) in arr2" :key="key" @click="btn_name(one.name)">{{one.name}}</div>
       </div>
     </div>
     <div class="shuju" v-for="(once,k) in arr1" :key="k">
-      <div class="zumu">{{once[0]}}<p v-if="once[0]==='A'" class="p1">&emsp;(按字母排序)</p></div>
+      <div class="zumu" style="padding-left: 0.16rem">{{once[0]}}<p v-if="once[0]==='A'" class="p1">&emsp;(按字母排序)</p></div>
       <div class="once" v-for="(one,key) in once[1]" :key="key" @click="btn_name(one.name)">
         {{one.name}}
       </div>
@@ -85,27 +85,26 @@
     line-height: 0;
   }
   .one_1 .shuju{
-    font-size: 0.8rem;
+    font-size: 0.128rem;
     width: 100%;
     border-top: 1px solid rgba(0,0,0,0.1);
     border-left: 1px solid rgba(0,0,0,0.1);
     box-shadow:0 1px 1px rgba(0,0,0,0.1),0 -1px 1px rgba(0,0,0,0.1);
-    margin-top: 5%;
+    margin-top: 3%;
     background:white;
   }
   .one_1 .zumu{
-    font-size: 0.8rem;
-    height: 1.87rem;
-    line-height: 1.87rem;
+    font-size: 0.128rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
     width: 100%;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-
   }
   .one_1 .once{
-    font-size: 0.9rem;
+    font-size: 0.13rem;
     width: 25%;
-    height: 2.5rem;
-    line-height: 2.5rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
     display: inline-block;
     text-align: center;
     border-right: 1px solid rgba(0,0,0,0.1);
@@ -119,17 +118,18 @@
   }
   .one_1 .p1{
     display: inline-block;
+    color: #999;
   }
   .one_1 .op_head{
-    line-height: 1.25rem;
-    font-size: 0.6rem;
+    line-height: 0.2rem;
+    font-size: 0.1rem;
   }
   .one_1 .head1{
     background-color: #3190e8;
-    height: 3.5rem;
-    line-height: 3.5rem;
+    height: 0.48rem;
+    line-height: 0.48rem;
     color: white;
-    font-size: 180%;
+    font-size: 0.16rem;
     position: fixed;
     top: 0px;
     right: 0px;
@@ -137,39 +137,40 @@
   }
   .one_1 .head2{
     background: white;
-    height: 3rem;
-    line-height: 3rem;
+    height: 0.48rem;
+    line-height: 0.48rem;
     font-size: 130%;
-    margin-top: 3.5rem;
+    margin-top: 0.48rem;
   }
   .one_1 .head3{
     text-align: right;
     background: white;
-    height: 3rem;
+    height: 0.48rem;
     display: flex;
     align-items: center;
     justify-content: right;
     border-top: 2px solid rgba(0,0,0,0.1);
     border-bottom: 2px solid rgba(0,0,0,0.1);
   }
-  .pull-right{
-    margin-right: 0.5rem;
-  }
   .pull-left{
-    margin-left: 0.5rem;
+    margin-left: 0.08rem;
   }
   #pull-right{
     font-weight: 900;
     color: #9f9f9f;
   }
   .span-left{
-    margin-left: 0.5rem;
     font-size: 180%;
     color: #3190e8;
+    width: 12%;
   }
   #span-right{
-    margin-right: 0.5rem;
-    font-size: 180%;
+    font-size: 160%;
+    margin-right: 0.08rem;
+    color: #999;
+  }
+  .head3_fh{
+    width: 88%;
   }
   .one_1 .once-c{
     color: #3190e8;
