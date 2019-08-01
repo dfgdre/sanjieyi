@@ -19,13 +19,13 @@
 <style scoped>
   .all_head{
     width: 100%;
-    height: 3.5rem;
+    height: 0.48rem;
     background: #3190e8;
   }
   .all_head .top_qyh{
     display: flex;
     align-items: center;
-    height: 3.5rem;
+    height: 0.48rem;
     color: white;
   }
   .all_head .t2{

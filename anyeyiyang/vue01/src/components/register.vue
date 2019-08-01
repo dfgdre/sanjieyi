@@ -11,7 +11,7 @@
         </div>
         <div class="register_add_two_qyh">
           <input type="text" placeholder="账号">
-          <van-switch v-model="checked" size="1rem" active-color="#07c160" inactive-color="#f44"/>
+          <van-switch v-model="checked" size="0.16rem" active-color="#07c160" inactive-color="#f44"/>
         </div>
         <div class="register_add_three_qyh">
           <input type="text" placeholder="账号">
@@ -47,12 +47,12 @@
     color: white;
   }
   .register .register_add_qyh{
-    margin-top: 0.5rem;
+    margin-top: 0.14rem;
   }
   .register .register_add_qyh>div{
-    padding: 1.4rem;
-    padding-bottom: 0.9rem;
-    padding-top: 0.9rem;
+    padding: 0.224rem;
+    padding-bottom: 0.144rem;
+    padding-top: 0.144rem;
     background-color: white;
     margin-bottom: 1px;
   }
